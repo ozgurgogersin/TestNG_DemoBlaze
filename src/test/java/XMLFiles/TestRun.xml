@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DemoBlazeProject"  >
+    <listeners>
+        <listener class-name="Listeners.ScreenshotListener"></listener>
+    </listeners>
+    <test name="Login with Chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="username" value="Group 4 Ozgur"></parameter>
+        <parameter name="password" value="Qwerty12+"></parameter>
+        <classes>
+            <class name="TestCases._01_Login"></class>
+            <class name="TestCases._02_AddProduct"></class>
+        </classes>
+    </test>
+
+    <test name="Login with Firefox">
+        <parameter name="browser" value="firefox"></parameter>
+        <parameter name="username" value="Group 4 Ozgur"></parameter>
+        <parameter name="password" value="Qwerty12+"></parameter>
+        <classes>
+            <class name="TestCases._01_Login"></class>
+            <class name="TestCases._02_AddProduct"></class>
+        </classes>
+    </test>
+
+</suite>
