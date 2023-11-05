@@ -29,27 +29,15 @@ public class customMethods  {
 
     }
 
-    public void waitUntilInvisibilty(WebElement element) {
-        wait.until(ExpectedConditions.invisibilityOf(element));
-    }
 
     public void waitUntilAlertIsPresent() {
         wait.until(ExpectedConditions.alertIsPresent());
     }
 
-    public void waitSuccessMessage() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='sa-icon sa-success animate'])")));
-    }
 
     public void scrollToElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) ParameterDriver.driver;
         js.executeScript("arguments[0].scrollIntoView();", element);
-    }
-
-    public void scrollTo() throws InterruptedException {
-        JavascriptExecutor js = (JavascriptExecutor) ParameterDriver.driver;
-        Thread.sleep(3000);
-        js.executeScript("window.scrollTo(0, 3000)");
     }
 
     public void clickMethod(WebElement element) {
@@ -70,6 +58,9 @@ public class customMethods  {
     public void assertText(WebElement element, String text) {
         waitUntilClickable(element);
         Assert.assertTrue(element.getText().contains(text));
+    }
+    public void navigateBackToTheHomepage() {
+        ParameterDriver.getDriver().navigate().to("https://www.demoblaze.com/index.html");
     }
 
     public void assertSuccessMessage() {

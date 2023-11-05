@@ -1,6 +1,4 @@
 package Utilities;
-
-import Pages.ButtonContent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -13,9 +11,6 @@ import java.util.logging.Logger;
 
 public class ParameterDriver {
     public static WebDriver driver;
- //   private static ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
-
-
     @BeforeTest
     @Parameters("browser")
     public void createParameteredDriver(String browserName) {
@@ -33,24 +28,18 @@ public class ParameterDriver {
                 driver = new EdgeDriver();
 
             }
-
             driver.manage().window().maximize();
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
         }
-
     }
-
 
     @AfterTest
     public void quitDriver() throws InterruptedException {
-        //  WebDriver driver = driverThreadLocal.get();
        if (driver != null) {
            Thread.sleep(2000);
             driver.quit();
             driver = null;
-//            driverThreadLocal.set(null);
         }
 
     }

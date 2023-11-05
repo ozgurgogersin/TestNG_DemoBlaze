@@ -13,7 +13,6 @@ public class ScreenshotListener  implements ITestListener{
             WebDriver driver = ((ParameterDriver) currentClass).getDriver();
 
             if (driver != null) {
-                // Assuming you have a ButtonContent class with a takeScreenShots method
                 ButtonContent bc = new ButtonContent();
                 bc.takeScreenShots(driver, result);
             }

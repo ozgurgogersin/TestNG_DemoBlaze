@@ -19,7 +19,7 @@ public class _01_Login extends ParameterDriver {
     ButtonContent bc;
     TextContent tc;
 
-    @Test//(expectedExceptions = UnhandledAlertException.class)
+    @Test
     @Parameters({"username", "password"})
     void Login(String username, String password) throws InterruptedException {
         driver.get("https://www.demoblaze.com/index.html");

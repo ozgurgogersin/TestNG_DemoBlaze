@@ -13,11 +13,6 @@ public class ButtonContent extends customMethods {
         PageFactory.initElements(ParameterDriver.driver,this);
     }
 
-    @FindBy(xpath = "//a[@id='signin2']")
-    public WebElement signUpButton1;
-
-    @FindBy(xpath = "//button[text()='Sign up']")
-    public WebElement signUpButton2;
     @FindBy(id = "login2")
     public WebElement loginButton1;
 
@@ -35,28 +30,10 @@ public class ButtonContent extends customMethods {
 
     @FindBy(xpath = "//a[text()='Add to cart']")
     public WebElement addToCard;
-    @FindBy(xpath = "//a[text()='Laptops']")
-    public WebElement laptopsButton;
-    @FindBy(xpath = "//a[text()='Sony vaio i5']")
-    public WebElement sonyVaioI5;
-
-    @FindBy(xpath = "//a[text()='Monitors']")
-    public WebElement monitorButton;
-
-    @FindBy(xpath = "//a[text()='Apple monitor 24']")
-    public WebElement appleMonitor24;
 
     @FindBy(xpath = "//a[@id='cartur']")
     public WebElement cartButton;
 
-    @FindBy(xpath = "(//td[text()='Apple monitor 24'])[1]/../td[4]//a[text()='Delete']")
-    public WebElement deleteButton;
-
-    @FindBy(xpath = "(//table[@class='table table-bordered table-hover table-striped']//td[2])[1]")
-    public WebElement appleMonitor24isDisplayed;
-
-    @FindBy(xpath = "//button[@id='next2']")
-    public WebElement nextButton;
     @FindBy(xpath = "//button[text()='Place Order']")
     public WebElement placeHolderButton;
 
