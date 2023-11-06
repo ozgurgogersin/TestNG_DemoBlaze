@@ -1,22 +1,16 @@
 package TestCases;
-
 import Pages.ButtonContent;
 import Pages.TextContent;
 import Utilities.ParameterDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 public class _03_GoToCartAndPlaceOrder extends ParameterDriver {
 
     ButtonContent bc;
     TextContent tc;
 
     @Test(dataProvider = "formList",invocationCount = 2)
-    public void clickOnCartAndPlaceOrder(String name, String country, String city, String creditCard, String month, String year) throws InterruptedException {
+    public void clickOnCartAndPlaceOrder(String name, String country, String city, String creditCard, String month, String year){
 
         bc = new ButtonContent();
         tc = new TextContent();

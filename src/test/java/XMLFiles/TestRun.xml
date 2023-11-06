@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="DemoBlazeProject"  >
+    <parameter name="Tester Name" value="Özgür Gögersin" />
+    <parameter name="Tester Email" value="ozgurgogersin@gmail.com" />
     <listeners>
         <listener class-name="Listeners.ScreenshotListener"></listener>
+        <listener class-name="Listeners.ExtentReportListener"></listener>
     </listeners>
-    <test name="Login with Chrome">
-        <parameter name="browser" value="chrome"></parameter>
-        <parameter name="username" value="Group 4 Ozgur"></parameter>
+    <test name="Login with Edge">
+        <parameter name="browser" value="edge"></parameter>
+        <parameter name="username" value="DemoBlazeTestNG"></parameter>
         <parameter name="password" value="Qwerty12+"></parameter>
         <classes>
             <class name="TestCases._01_Login"></class>
@@ -16,8 +19,21 @@
     </test>
 
     <test name="Login with Firefox">
+
         <parameter name="browser" value="firefox"></parameter>
-        <parameter name="username" value="Group 4 Ozgur"></parameter>
+        <parameter name="username" value="DemoBlazeTestNG"></parameter>
+        <parameter name="password" value="Qwerty12+"></parameter>
+        <classes>
+            <class name="TestCases._01_Login"></class>
+            <class name="TestCases._02_AddProduct"></class>
+            <class name="TestCases._03_GoToCartAndPlaceOrder"></class>
+        </classes>
+    </test>
+
+    <test name="Login with Chrome">
+
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="username" value="DemoBlazeTestNG"></parameter>
         <parameter name="password" value="Qwerty12+"></parameter>
         <classes>
             <class name="TestCases._01_Login"></class>

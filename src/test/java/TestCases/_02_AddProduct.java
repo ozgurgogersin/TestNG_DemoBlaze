@@ -1,9 +1,6 @@
 package TestCases;
-
 import Pages.ButtonContent;
-import Pages.TextContent;
 import Utilities.ParameterDriver;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class _02_AddProduct extends ParameterDriver {

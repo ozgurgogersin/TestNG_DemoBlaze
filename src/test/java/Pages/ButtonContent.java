@@ -19,7 +19,7 @@ public class ButtonContent extends customMethods {
     @FindBy(xpath = "//button[text()='Log in']")
     public WebElement loginButton2;
 
-    @FindBy(xpath = "//a[text()='Welcome Group 4 Ozgur']")
+    @FindBy(xpath = "//a[text()='Welcome DemoBlazeTestNG']")
     public WebElement successfullyLogin;
 
     @FindBy(xpath = "//a[text()='Phones']")

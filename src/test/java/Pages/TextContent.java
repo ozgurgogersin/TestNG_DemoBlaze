@@ -26,9 +26,6 @@ public class TextContent extends customMethods {
     @FindBy(id = "loginpassword")
     public WebElement loginPassword;
 
-    @FindBy(xpath = "//h3[text()='1550']")
-    public WebElement expectedResult;
-
     @FindBy(xpath = "//input[@id='name']")
     public WebElement firstName;
 
@@ -46,8 +43,5 @@ public class TextContent extends customMethods {
 
     @FindBy(xpath = "//input[@id='year']")
     public WebElement year;
-
-    @FindBy(xpath = "(//p[@class='lead text-muted '])[1]")
-    public List<WebElement> text;
 
 }
